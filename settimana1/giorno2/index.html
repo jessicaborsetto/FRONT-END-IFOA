@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      table {
+        border: black 1px solid;
+        border-collapse: collapse;
+      }
+
+      td, th {
+        border: black 1px solid;
+        padding: 10px;
+      }
+    </style>
+
+  </head>
+  <body>
+    <ul>
+      <li><a href="index.html" alt="Home page"> Home</a></li>
+      <li><a href="form.html" alt="Form"> Form</a></li>
+    </ul>
+
+    <h1>tabelle</h1>
+
+    <table>
+      <tbody>
+        <tr>
+          <td>cella 1</td>
+          <td>cella 2</td>
+          <td>cella 3</td>
+        </tr>
+
+        <tr>
+          <td>cella 1</td>
+          <td>cella 2</td>
+          <td>cella 3</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <hr />
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Cognome</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Mario</td>
+                <td>Rossi</td>
+                <td>mario@rossi.com</td>
+            </tr>
+            <tr>
+                <td>Aldo</td>
+                <td>Bianchi</td>
+                <td>aldo@bianchi.com</td>
+            </tr>
+            <tr>
+                <td>Anna</td>
+                <td>Ferri</td>
+                <td>anna@ferri.com</td>
+            </tr>
+            <tfoot>
+                <tr>
+                    <td colspan="3"><strong>Totale utenti 3</strong></td>
+                </tr>
+            </tfoot>
+        </tbody>
+    </table>
+
+    <hr />
+
+    <table>
+        <thead>
+            <tr>
+            <th colspan="4">TABELLA COMPLESSA</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>riga 1 cella 1</td>
+                <td>riga 2 cella 2</td>
+                <td>riga 3 cella 3</td>
+                <td>riga 4 cella 4</td>
+            </tr>
+            <tr>
+                <td>riga 2 cella 1</td>
+                <td colspan="2">riga 2 cella 2-3</td>
+                <td rowspan="2">riga 2-3 cella 4</td>
+            </tr>
+            <tr>
+                <td rowspan="2">riga 3-4 cella 1</td>
+                <td>riga 3 cella 2</td>
+                <td colspan="2">riga 3 cella 3</td>
+            </tr>
+            <tr>
+                <td>riga 4 cella 2</td>
+                <td>riga 4 cella 3</td>
+                <td>riga 4 cella 4</td>
+            </tr>
+        </tbody>
+    </table>
+
+  </body>
+</html>
