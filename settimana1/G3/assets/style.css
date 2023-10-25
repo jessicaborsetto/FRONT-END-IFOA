@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&family=Poppins:wght@400;700&family=Prata&family=Roboto:wght@300;400;700&display=swap');
+
+html, body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1{
+    color:#2e81f7;
+    text-shadow: 4px 4px 8px #666; 
+    text-shadow: 4px 4px 8px #666, -4px -4px 8px #333; 
+}
+/*singola e multipla*/
+
+
+
+#immagine{
+    text-align: center;
+}
+
+img{
+    width: 10%;
+}
+
+.rosso{
+    color: red;
+    text-align: left;
+}
+
+.margine{
+    border: 2px solid black;
+}
+
+#icona{
+    font-size: 2em;
+}
+
+/*selettori combinatori*/
+#discendenti h4{
+    text-align: right;
+}
+    /*-->la specifica è h4: VOGLIO GLI H4 DI DIV TUTTI A DESTRA*/
+
+
+/*selettore di figli diretti*/ 
+#diretti > h4 {
+    text-align: right;
+}
+
+
+/*selettore di fratelli adiacenti*/
+#adiacenti + h5{
+    text-decoration: underline;
+    color: green;
+}
+
+
+/*selettori fratelli generale*/
+#generali ~ h5{
+    text-decoration: underline;
+    color: green;
+}
+/*si possono raggruppare separando i vari selettori con la virgola. regola DRY - DON'T REPEAT YOURSELF. si evitano rindondanze e di appesantire il codice*/
+
+
+/*PSEUDO CLASSI*/
+a:hover {color: red;}
+
+
+#primaRiga li:first-child{
+   color: navy;
+}
+
+#primaRiga li:last-child{
+    color: red;
+ }
+
+ table{
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 30%;
+    margin: 0 auto;
+ }
+
+ td{
+    border: 2px solid black;
+ }
+
+ table tr:nth-child(even){
+    background-color: aqua;
+ }
+
+ ul li::before{
+    content: 'Studente ';
+ }
+
+
+#elementi p:first-of-type{
+    color: red;
+}

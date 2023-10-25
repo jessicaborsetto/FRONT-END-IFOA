@@ -1,0 +1,71 @@
+html, body{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/*HEADER*/
+
+header{
+   text-align: center;
+   margin-bottom: 5%;
+}
+
+#nota{
+    color: #144947;
+    background-color: #fcfaf0;
+    padding: 15px 0;
+    border-top: 2px solid #fde4a7;
+}
+
+/*MAIN*/
+main{
+    margin: 0 28%;
+}
+
+h1{
+    text-align: center;
+    color: #2e2e2e;
+}
+
+.sottotitolo{
+    text-align: center;
+    margin-bottom: 4%;
+}
+
+#focaccia{
+    width: 100%;
+    border-radius: 2%;
+    box-shadow: 0px 6px 6px 4px rgba(0, 0, 0, 0.2), 0px 6px 6px 4px rgba(0, 0, 0, 0.19);
+}
+
+figcaption{
+    color: #9c9c9c;
+    text-align: center;
+    margin: 1.8em 0;
+}
+
+h3, h4{
+    padding-left: 20px;
+    text-align: left;
+    margin: 5px 0;
+}
+
+#ft{
+color: #a5340d;
+}
+
+#link{
+    color: #35807f;
+}
+
+.link_esterni{
+    border-left:solid #fde4a7;
+    margin-bottom: 10%
+}
+
+.ingredienti, .metodo{
+    border-bottom: solid #cbf4f3;
+}
+
+ul li{
+    padding: 5px 0;
+}
