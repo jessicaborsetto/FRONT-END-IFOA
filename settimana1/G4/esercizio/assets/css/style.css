@@ -11,6 +11,7 @@ body{
     background-image: url(../img/sfondo.png);
     background-repeat: repeat;
 }
+
 /* HEADER */
 header, #home{
     margin: 25px;
@@ -29,6 +30,10 @@ header i{
     font-size: 5px;
 }
 
+#menù{
+    text-align: center;
+}
+
 /*div home*/
 #home{
     background-color: #fff;
@@ -44,10 +49,6 @@ header i{
 #header a:hover{
     color:#ff2751
 }
-
-#menù
-
-
 
 /* MAIN */
 h2{
