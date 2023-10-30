@@ -23,7 +23,7 @@ boolean: vero o falso
 */
 /* SCRIVI QUI LA TUA RISPOSTA */
 let myName = 'Jessica';
-console.log(myName)
+console.log(myName);
 
 /* ESERCIZIO 3
  Scrivi il codice necessario ad effettuare un addizione (una somma) dei numeri 12 e 20.
@@ -31,15 +31,15 @@ console.log(myName)
 /* SCRIVI QUI LA TUA RISPOSTA */
 let number1 = 12;
 let number2 = 20;
-console.log(somma)
-document.getElementById('somma').innerHTML = number1 + number2
+console.log(somma);
+document.getElementById('somma').innerHTML = number1 + number2;
 
 /* ESERCIZIO 4
  Crea una variable di nome "x" e assegna ad essa il numero 12.
 */
 /* SCRIVI QUI LA TUA RISPOSTA */
-let x = 12
-console.log(x)
+let x = 12;
+console.log(x);
 
 /* ESERCIZIO 5
   Riassegna un nuovo valore alla variabile "name" già esistente: il tuo cognome.
@@ -50,15 +50,15 @@ console.log(x)
 //console.log(myName) ----> la console dà errore perchè il valore 'myName' è già stato usato.
 
 const mySurname = 'Borsetto';
-console.log(mySurname)
+console.log(mySurname);
 
 /* ESERCIZIO 6
  Esegui una sottrazione tra i numeri 4 e la variable "x" appena dichiarata (che contiene il numero 12).
 */
 /* SCRIVI QUI LA TUA RISPOSTA */
 let number3 = 4;
-console.log(sottrazione)
-document.getElementById('sottrazione').innerHTML = number3 - x
+console.log(sottrazione);
+document.getElementById('sottrazione').innerHTML = number3 - x;
 
 /* ESERCIZIO 7
  Crea due variabili: "name1" e "name2". Assegna a name1 la stringa "john", e assegna a name2 la stringa "John" (con la J maiuscola!).
@@ -71,4 +71,17 @@ let name2 = 'John';
 console.log(name1 === name2);
 console.log(name1 === name2.toLowerCase());
 
+//soluzione2!!!
+let name1 = 'john';
+let name2 = 'John';
 
+let verifica = name1 === name2;
+console.log('i due nomi sono uguali?' + verifica);
+//oppure
+console.log('i due nomi sono uguali?' + (name1 === name2));
+console.log('i due nomi sono uguali?' , name1 === name2);
+
+
+let altraVerifica = name1.toLowerCase() === name2.toLowerCase();
+console.log('i due nomi sono uguali?' , (altraVerifica));
+console.log('i due nomi sono uguali?' , name1.toLowerCase() === name2.toLowerCase());
