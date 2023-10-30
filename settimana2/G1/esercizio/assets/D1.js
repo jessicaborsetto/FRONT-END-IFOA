@@ -39,6 +39,7 @@ document.getElementById('somma').innerHTML = number1 + number2
 */
 /* SCRIVI QUI LA TUA RISPOSTA */
 let x = 12
+console.log(x)
 
 /* ESERCIZIO 5
   Riassegna un nuovo valore alla variabile "name" già esistente: il tuo cognome.
