@@ -46,7 +46,7 @@ let x = 12
 */
 /* SCRIVI QUI LA TUA RISPOSTA */
 //let myName = 'Borsetto'
-//console.log(myName) ----> la console si incacchia perchè il valore 'myName' è già stato usato.
+//console.log(myName) ----> la console dà errore perchè il valore 'myName' è già stato usato.
 
 const mySurname = 'Borsetto';
 console.log(mySurname)
