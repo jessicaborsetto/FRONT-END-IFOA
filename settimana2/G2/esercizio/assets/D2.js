@@ -5,18 +5,19 @@
 let numero1 = 5;
 let numero2 = 10;
 if (numero1 > numero2) {
-  document.getElementById("es1").innerHTML = "il numero è maggiore";
-} else {
-  document.getElementById("es1").innerHTML = "il numero è minore";
-}
+  document.getElementById("es1").innerHTML = "il numero è maggiore è " +  numero1;
+} else if (numero1 < numero2){ 
+  document.getElementById("es1").innerHTML = "il numero è minore è " +  numero1;
+} else
+  document.getElementById("es1").innerHTML = "i numeri sono uguali";
 
 /* ESERCIZIO 2
   Scrivi un algoritmo che mostri "not equal" in console se un numero intero fornito è diverso da 5.
 */
 /* SCRIVI QUI LA TUA RISPOSTA */
 let numero3 = 10;
-let numero4 = 5;
-if (numero3 == numero4) {
+
+if (numero3 == 5) {
   console.log("equal");
 } else {
   console.log("not equal");
