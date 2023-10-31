@@ -146,6 +146,8 @@ let pari = 10 % 2;
 
 if (pari == 0) {
   console.log("il numero è pari");
+} else {
+  console.log("il numero è dispari");
 }
 
 /* ESERCIZIO 10
