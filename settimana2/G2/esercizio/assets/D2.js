@@ -5,11 +5,11 @@
 let numero1 = 5;
 let numero2 = 10;
 if (numero1 > numero2) {
-  document.getElementById("es1").innerHTML = "il numero è maggiore è " +  numero1;
-} else if (numero1 < numero2){ 
-  document.getElementById("es1").innerHTML = "il numero è minore è " +  numero1;
-} else
-  document.getElementById("es1").innerHTML = "i numeri sono uguali";
+  document.getElementById("es1").innerHTML =
+    "il numero è maggiore è " + numero1;
+} else if (numero1 < numero2) {
+  document.getElementById("es1").innerHTML = "il numero è minore è " + numero1;
+} else document.getElementById("es1").innerHTML = "i numeri sono uguali";
 
 /* ESERCIZIO 2
   Scrivi un algoritmo che mostri "not equal" in console se un numero intero fornito è diverso da 5.
@@ -36,12 +36,19 @@ if (divisione == 0) {
   Scrivi un algoritmo per verificare che, dati due numeri interi, il valore di uno di essi sia 8 oppure se la loro addizione/sottrazione sia uguale a 8.
 */
 /* SCRIVI QUI LA TUA RISPOSTA */
-let numero5 = 4
-let numero6 = 4
-if (numero5 + numero6 == 8 || numero6 == 8 ) {
-  console.log("true");
-} else {console.log("false");}
-
+let verifica1 = 4;
+let verifica2 = 4;
+if (
+  verifica1 + verifica2 === 8 ||
+  verifica1 === 8 ||
+  verifica2 === 8 ||
+  verifica1 - verifica2 === 8 ||
+  verifica2 - valore1 === 8
+) {
+  console.log("verificato");
+} else {
+  console.log("non verificato");
+}
 
 /* ESERCIZIO 5
   Stai lavorando su un sito di e-commerce. Stai salvando il saldo totale del carrello dell'utente in una variabile "totalShoppingCart".
@@ -49,12 +56,14 @@ if (numero5 + numero6 == 8 || numero6 == 8 ) {
   Crea un algoritmo che determini l'ammontare totale che deve essere addebitato all'utente per il checkout.
 */
 /* SCRIVI QUI LA TUA RISPOSTA */
-let totalShoppingCart = 60;
-if  (totalShoppingCart < 50) {
-  document.getElementById('ShoppingCart').innerHTML = totalShoppingCart + 10;
-} else {
-  document.getElementById('ShoppingCart').innerHTML = 'hai la spedizione gratis';
+let totalShoppingCart = 51;
+let spedizione = 10;
+let totale = totalShoppingCart; //tecnica carrello di ecommerce
+
+if (totalShoppingCart < 50) {
+  totale += spedizione;
 }
+document.getElementById("totale").innerHTML = "il tuo totale è: " + totale;
 
 /* ESERCIZIO 6
   Stai lavorando su un sito di e-commerce. Oggi è il Black Friday e viene applicato il 20% su ogni prodotto.
@@ -62,15 +71,15 @@ if  (totalShoppingCart < 50) {
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-const scontoBF = 20;
-let totalShoppingCart1 = 60;
-let totalescontato = (totalShoppingCart1 * scontoBF)/100
+let totalShoppingCart2 = 51;
+totalShoppingCart2 = totalShoppingCart2 * 0.8;
+let spedizione2 = 10;
+let totale2 = totalShoppingCart2;
 
-if  (totalescontato < 50) {
-  document.getElementById('ShoppingCart1').innerHTML = totalShoppingCart + 10;
-} else {
-  document.getElementById('ShoppingCart1').innerHTML = 'hai la spedizione gratis';
+if (totalShoppingCart < 50) {
+  totale2 += spedizione2;
 }
+document.getElementById("black").innerHTML = "il tuo totale è: " + totale2;
 
 /* ESERCIZIO 7
   Crea tre variabili, e assegna un valore numerico a ciascuna di esse.
@@ -79,25 +88,53 @@ if  (totalescontato < 50) {
 */
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-let valore1 = 2;
-let valore2 = 10;
-let valore3 = 1;
+let x1 = 2;
+let x2 = 14;
+let x3 = 9;
 
-if (valore1 < valore2) {
-  document.getElementById ('ordine').innerHTML = valore2; 
+if (x1 >= x2) {
+  if (x3 >= x1) {
+    document.getElementById("primo").innerHTML = x3;
+    document.getElementById("secondo").innerHTML = x1;
+    document.getElementById("terzo").innerHTML = x2;
+  } else {
+    if (x3 >= x2) {
+      document.getElementById("primo").innerHTML = x1;
+      document.getElementById("secondo").innerHTML = x3;
+      document.getElementById("terzo").innerHTML = x2;
+    } else {
+      document.getElementById("primo").innerHTML = x1;
+      document.getElementById("secondo").innerHTML = x2;
+      document.getElementById("terzo").innerHTML = x3;
+    }
+  }
+} else {
+  if (x3 >= x2) {
+    document.getElementById("primo").innerHTML = x3;
+    document.getElementById("secondo").innerHTML = x2;
+    document.getElementById("terzo").innerHTML = x1;
+  } else {
+    if (x3 >= x1) {
+      document.getElementById("primo").innerHTML = x2;
+      document.getElementById("secondo").innerHTML = x3;
+      document.getElementById("terzo").innerHTML = x1;
+    } else {
+      document.getElementById("primo").innerHTML = x2;
+      document.getElementById("secondo").innerHTML = x1;
+      document.getElementById("terzo").innerHTML = x3;
+    }
+  }
 }
-
-
-
-
-
 
 /* ESERCIZIO 8
   Crea un algoritmo per verificare che un valore fornito sia un numero oppure no (suggerimento: cerca su un motore di ricerca "typeof").
 */
 /* SCRIVI QUI LA TUA RISPOSTA */
-
-console.log (typeof 10);
+let test = 'ciao'
+if (typeof test === 'number'){
+  document.getElementById('typeof').innerHTML = test + ' è un numero'
+ } else {
+  document.getElementById('typeof').innerHTML = test + ' non è un numero'}
 
 
 /* ESERCIZIO 9
@@ -107,8 +144,9 @@ console.log (typeof 10);
 let number7 = 10;
 let pari = 10 % 2;
 
-if (pari == 0) {console.log ('il numero è pari')};
-
+if (pari == 0) {
+  console.log("il numero è pari");
+}
 
 /* ESERCIZIO 10
   Modifica la logica del seguente algoritmo in modo che mostri in console il messaggio corretto in ogni circostanza.
@@ -123,9 +161,6 @@ if (pari == 0) {console.log ('il numero è pari')};
 */
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-     
-
-
 /* ESERCIZIO 11
   Fornito il seguente oggetto, scrivi del codice per aggiungere una proprietà "city", il cui valore sarà "Toronto".
 */
@@ -135,14 +170,32 @@ const me = {
   lastName: "Doe",
   skills: ["javascript", "html", "css"],
 };
-me.city = 'Toronto';
-document.getElementById('me').innerHTML =  me + '' + me.city;
+me.city = "Toronto";
+document.getElementById("me").innerHTML = me + "" + me.city;
 
 /* ESERCIZIO 12
   Lavorando sempre sull'oggetto precedentemente fornito, scrivi del codice per rimuovere la proprietà "lastName".
 */
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-document.getElementById('eliminato').innerHTML =  me + '' + me.city;
+document.getElementById("eliminato").innerHTML = me + "" + me.city;
 delete me.city;
-document.getElementById('eliminato').innerHTML += me.city; //elimino IL VALORE
+document.getElementById("eliminato").innerHTML += me.city; //elimino IL VALORE
+
+/* ESERCIZIO 13
+  Lavorando sempre sull'oggetto precedentemente fornito, scrivi del codice per rimuovere l'ultimo elemento della proprietà "skills".
+*/
+
+/* SCRIVI QUI LA TUA RISPOSTA */
+
+/* ESERCIZIO 14
+  Scrivi del codice per creare un array inizialmente vuoto. Riempilo successivamente con i numeri da 1 a 10.
+*/
+
+/* SCRIVI QUI LA TUA RISPOSTA */
+
+/* ESERCIZIO 15
+  Scrivi del codice per sostituire l'ultimo elemento dell'array, ovvero il valore 10, con il valore 100.
+*/
+
+/* SCRIVI QUI LA TUA RISPOSTA */
