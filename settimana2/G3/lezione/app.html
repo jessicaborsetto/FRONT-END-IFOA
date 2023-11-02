@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calcolo età</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+  <body>
+    <div id="container">
+      <h1>Verfica la tua età</h1>
+
+      <!--interamente pilotato da js xk non ha method e action-->
+      <form>
+        <fieldset>
+          <label for="nome">Inserisci il tuo nome</label>
+          <input type="text" name="nome" id="nome" />
+          <br />
+          <label for="anno">inserisci l'anno di nascità</label>
+          <input type="number" name="anno" id="anno"/>
+        </fieldset>
+      </form>
+
+      <br />
+
+      <!--Button fake = aspetta che js gli dica cosa fare = scatena la serie di eventi dell'eventHandler. vai su js e cerca questa cosa-->
+      <button type="button" id="verifica" onclick="eventHandler()" >VERIFICA</button>
+
+      <h3 id="errore"></h3>
+    </div>
+
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>
