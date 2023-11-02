@@ -88,43 +88,59 @@ document.getElementById("black").innerHTML = "il tuo totale è: " + totale2;
 */
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-let x1 = 2;
-let x2 = 14;
-let x3 = 9;
+  let x1 = 27;
+  let x2 = 14;
+  let x3 = 45;
 
-if (x1 >= x2) {
-  if (x3 >= x1) {
-    document.getElementById("primo").innerHTML = x3;
-    document.getElementById("secondo").innerHTML = x1;
-    document.getElementById("terzo").innerHTML = x2;
-  } else {
-    if (x3 >= x2) {
-      document.getElementById("primo").innerHTML = x1;
-      document.getElementById("secondo").innerHTML = x3;
-      document.getElementById("terzo").innerHTML = x2;
-    } else {
-      document.getElementById("primo").innerHTML = x1;
-      document.getElementById("secondo").innerHTML = x2;
-      document.getElementById("terzo").innerHTML = x3;
-    }
-  }
-} else {
-  if (x3 >= x2) {
-    document.getElementById("primo").innerHTML = x3;
-    document.getElementById("secondo").innerHTML = x2;
-    document.getElementById("terzo").innerHTML = x1;
-  } else {
-    if (x3 >= x1) {
-      document.getElementById("primo").innerHTML = x2;
-      document.getElementById("secondo").innerHTML = x3;
-      document.getElementById("terzo").innerHTML = x1;
-    } else {
-      document.getElementById("primo").innerHTML = x2;
-      document.getElementById("secondo").innerHTML = x1;
-      document.getElementById("terzo").innerHTML = x3;
-    }
-  }
-}
+          /*
+            if (x1 >= x2) {
+              if (x3 >= x1) {
+                document.getElementById("primo").innerHTML = x3;
+                document.getElementById("secondo").innerHTML = x1;
+                document.getElementById("terzo").innerHTML = x2;
+              } else {
+                if (x3 >= x2) {
+                  document.getElementById("primo").innerHTML = x1;
+                  document.getElementById("secondo").innerHTML = x3;
+                  document.getElementById("terzo").innerHTML = x2;
+                } else {
+                  document.getElementById("primo").innerHTML = x1;
+                  document.getElementById("secondo").innerHTML = x2;
+                  document.getElementById("terzo").innerHTML = x3;
+                }
+              }
+            } else {
+              if (x3 >= x2) {
+                document.getElementById("primo").innerHTML = x3;
+                document.getElementById("secondo").innerHTML = x2;
+                document.getElementById("terzo").innerHTML = x1;
+              } else {
+                if (x3 >= x1) {
+                  document.getElementById("primo").innerHTML = x2;
+                  document.getElementById("secondo").innerHTML = x3;
+                  document.getElementById("terzo").innerHTML = x1;
+                } else {
+                  document.getElementById("primo").innerHTML = x2;
+                  document.getElementById("secondo").innerHTML = x1;
+                  document.getElementById("terzo").innerHTML = x3;
+                }
+              }
+            }
+          */
+
+// soluzione con array
+let arrayOrd = [];
+arrayOrd [0] = x1;
+arrayOrd [1] = x2;
+arrayOrd [2] = x3;
+
+arrayOrd.sort();
+
+document.getElementById ('primo').innerHTML = arrayOrd[2];
+document.getElementById ('secondo').innerHTML = arrayOrd[1];
+document.getElementById ('terzo').innerHTML = arrayOrd[0];
+
+
 
 /* ESERCIZIO 8
   Crea un algoritmo per verificare che un valore fornito sia un numero oppure no (suggerimento: cerca su un motore di ricerca "typeof").
@@ -163,6 +179,16 @@ if (pari == 0) {
 */
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+//bisogna invertire <10 e <5 perchè si ferma al <10 AL PRIMO TRUE!!!!
+let val = 7
+if (val < 5) {
+  console.log("Meno di 5");
+} else if (val < 10) {
+  console.log("Meno di 10");
+} else {
+  console.log("Uguale a 10 o maggiore");
+}
+
 /* ESERCIZIO 11
   Fornito il seguente oggetto, scrivi del codice per aggiungere una proprietà "city", il cui valore sarà "Toronto".
 */
@@ -172,17 +198,17 @@ const me = {
   lastName: "Doe",
   skills: ["javascript", "html", "css"],
 };
+
 me.city = "Toronto";
-document.getElementById("me").innerHTML = me + "" + me.city;
+console.log(me);
 
 /* ESERCIZIO 12
   Lavorando sempre sull'oggetto precedentemente fornito, scrivi del codice per rimuovere la proprietà "lastName".
 */
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-document.getElementById("eliminato").innerHTML = me + "" + me.city;
-delete me.city;
-document.getElementById("eliminato").innerHTML += me.city; //elimino IL VALORE
+delete me.lastName;
+console.log(me); //elimino IL VALORE
 
 /* ESERCIZIO 13
   Lavorando sempre sull'oggetto precedentemente fornito, scrivi del codice per rimuovere l'ultimo elemento della proprietà "skills".
@@ -190,14 +216,31 @@ document.getElementById("eliminato").innerHTML += me.city; //elimino IL VALORE
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+delete me.skills[2];
+console.log(me);
+
 /* ESERCIZIO 14
   Scrivi del codice per creare un array inizialmente vuoto. Riempilo successivamente con i numeri da 1 a 10.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+let myArray = []
+myArray[0] = 1;
+myArray[1] = 2;
+myArray[2] = 3;
+myArray[3] = 4;
+myArray[4] = 5;
+myArray[5] = 6;
+myArray[6] = 7;
+myArray[7] = 8;
+myArray[8] = 9;
+myArray[9] = 10;
+console.log(myArray);
 
 /* ESERCIZIO 15
   Scrivi del codice per sostituire l'ultimo elemento dell'array, ovvero il valore 10, con il valore 100.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+myArray[9] = 100;
+console.log(myArray);
