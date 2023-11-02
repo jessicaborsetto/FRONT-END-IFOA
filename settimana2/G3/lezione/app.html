@@ -26,9 +26,24 @@
       <!--Button fake = aspetta che js gli dica cosa fare = scatena la serie di eventi dell'eventHandler. vai su js e cerca questa cosa-->
       <button type="button" id="verifica" onclick="eventHandler()" >VERIFICA</button>
 
-      <h3 id="errore"></h3>
+      <h3 id="errore">&nbsp;</h3>
+    </div>
+
+    <div id="stampa">
+      <h3 id="mioNome">&nbsp;</h3>
+      <h3 id="miaVerifica">&nbsp;</h3>
+    </div>
+
+    <div id="descrizione">
+      <p><b>*</b> Questa applicazione legge nome e anno e verifica se sei maggiorenne o minorenne</p>
     </div>
 
     <script src="assets/js/app.js"></script>
   </body>
 </html>
+
+
+<!--in tutti gli elementi vuoti si aggiunge uno spazio vuoto OCCUPATO &nbsp; così il p rimane dove è, non si muove
+LO DEVO SCRIVERE ANCHE NEL JS 
+        errore.innerHTML = '&nbsp;';
+-->

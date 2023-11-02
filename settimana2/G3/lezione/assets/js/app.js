@@ -28,18 +28,29 @@ let errore = document.getElementById('errore');
 function eventHandler(){
     leggiForm();
     //controllo form
-    if (anno>=1900 && anno<=2023 && nome!=''){
-        errore.innerHTML = '';
+    if (controlla()){
         calcolaEta();
         verifica();
         scrivi();
         cancellaForm();
     } else { 
-        //alert('Inserire un numero tra 1900 e 2023')
-        errore.innerHTML='Attenzione! Compilare tutti i campi e inserire un numero tra 1900 e 2023';
         return;
     }
 }
+
+//creo una funzione di SOLO controllo, quando una funzione risulta false si ferma tutto fino a quando non dà true
+ 
+    function controlla() {
+        if (anno>=1900 && anno<=2023 && nome!='') {
+            errore.innerHTML = '&nbsp;';
+            return true;
+        }else{
+            errore.innerHTML='Attenzione! Compilare tutti i campi e inserire un numero tra 1900 e 2023';
+            return;
+            return false;
+        }
+    }
+ 
 
 function leggiForm() {
     nome = nome.value;  
@@ -57,5 +68,12 @@ function verifica(){
 }
 
 function scrivi(){
-    
+    document.getElementById('mioNome').innerHTML = 'Ciao ' + nome;
+    document.getElementById('miaVerifica').innerHTML = 'La tua età è ' + eta + '; sei ' + stato;
+}
+
+function cancellaForm(){
+    document.getElementById('nome').value = '';
+    document.getElementById('anno').value = '';
+
 }
