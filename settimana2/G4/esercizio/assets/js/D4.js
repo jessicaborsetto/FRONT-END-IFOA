@@ -169,8 +169,12 @@ console.log(cutString('gesualda'))
 
 /* SCRIVI QUI LA TUA RISPOSTA */
     
-function giveMeRandom(n){
-    let random = Math.floor(Math.random(n)*11)
-    return random;
+function giveMeRandom(n) {
+    let arrayNumeri = [];
+    for (let i = 0; i < n; i++) {
+        arrayNumeri.push(Math.floor(Math.random() * 11));
+    }
+    return arrayNumeri;
 }
-console.log(giveMeRandom())
+
+console.log(giveMeRandom(5));
