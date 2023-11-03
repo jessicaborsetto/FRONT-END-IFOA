@@ -119,17 +119,31 @@ console.log(check3and7(11))
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+function reverseString(){
+    let stringa = 'EPICODE';
+    let splitstr = stringa.split ('');
+    let reversestr = splitstr.reverse();
+    let joinstr = reversestr.join('');
+    return joinstr;
+}
+console.log(reverseString())
+
 /* ESERCIZIO 8
  Scrivi una funzione di nome "upperFirst", che riceve come parametro una stringa formata da diverse parole.
  La funzione deve rendere maiuscola la prima lettera di ogni parola contenuta nella stringa.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+/* SCRIVI QUI LA TUA RISPOSTA 
 
-//const parole = ['gatto', 'cane', 'coniglio'];
 
-//function upperFirst(parole){}
-   
+function upperFirst(){
+    let p1 = 'gatto';
+    let p2 = 
+    
+    
+}
+console.log(stringa)
+   */
 
 
     
@@ -156,3 +170,9 @@ console.log(cutString(slice3)) */
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+    
+function giveMeRandom(n){
+    let random = Math.floor(Math.random(n)*11)
+    return random;
+}
+console.log(giveMeRandom())
