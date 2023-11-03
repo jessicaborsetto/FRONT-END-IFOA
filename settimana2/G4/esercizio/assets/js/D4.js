@@ -111,7 +111,7 @@ function check3and7(n){
         return 'il numero non è accettato';
     }
 }
-console.log(check3and7(11))
+console.log(check3and7(-11))
 
 /* ESERCIZIO 7
  Scrivi una funzione di nome "reverseString", il cui scopo è invertire una stringa fornita come parametro (es. "EPICODE" --> "EDOCIPE")
@@ -133,37 +133,35 @@ console.log(reverseString())
  La funzione deve rendere maiuscola la prima lettera di ogni parola contenuta nella stringa.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA 
+/* SCRIVI QUI LA TUA RISPOSTA */
 
+let frase = 'Questo è il numero otto del gruppo di esercizi del giorno quattro settimana due'
 
-function upperFirst(){
-    let p1 = 'gatto';
-    let p2 = 
-    
-    
+function upperFirst(stringa){
+    let arrayFrase = stringa.split (' '); //ottengo un array di parole se metto lo split con lo spazio
+    let risultato = [];
+    for (let i=0; i < arrayFrase.length; i++){
+        let prima = arrayFrase[1].charAt(0) //estrai la prima lettera delle parole che trovi
+        let parolaTagliata = arrayFrase[1].slice(1) //elimina la prima lettera di ogni parola
+        let parolaFinale = prima.toUpperCase() + parolaTagliata;
+        risultato.push(parolaFinale);
+    }
+   return risultato.join(' ')
 }
-console.log(stringa)
-   */
-
-
-    
-
+console.log(upperFirst(frase))
+   
 
 /* ESERCIZIO 9
  Scrivi una funzione di nome "cutString", che riceve come parametro una stringa. La funzione deve creare una nuova stringa senza il primo e l'ultimo carattere
  della stringa originale.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA 
-const parola = 'ciao'
-const slice1 = parola.slice(1);
-const slice2 = parola.slice(4);
-const slice3 = parola.slice(1 && 4) 
+/* SCRIVI QUI LA TUA RISPOSTA */
+function cutString(stringa){
+    return stringa.slice(1, stringa.length -1); //da quale carattere a dove fermarti
+}
 
-
-console.log(cutString(slice3)) */
-
-
+console.log(cutString('gesualda'))
 
 /* ESERCIZIO 10
  Scrivi una funzione di nome "giveMeRandom", che accetta come parametro un numero n e ritorna un'array contenente n numeri casuali inclusi tra 0 e 10.
