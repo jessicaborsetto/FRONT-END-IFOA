@@ -141,8 +141,8 @@ function upperFirst(stringa){
     let arrayFrase = stringa.split (' '); //ottengo un array di parole se metto lo split con lo spazio
     let risultato = [];
     for (let i=0; i < arrayFrase.length; i++){
-        let prima = arrayFrase[1].charAt(0) //estrai la prima lettera delle parole che trovi
-        let parolaTagliata = arrayFrase[1].slice(1) //elimina la prima lettera di ogni parola
+        let prima = arrayFrase[1].charAt(0) //estrai la prima lettera delle parole che trovi --> 1 è indice della prima parola senza maiuscola, 0 è la posizione della lettera
+        let parolaTagliata = arrayFrase[1].slice(1) //elimina la prima lettera di ogni parola e restituisci il resto della parola (slice 1 è posizione carattere)
         let parolaFinale = prima.toUpperCase() + parolaTagliata;
         risultato.push(parolaFinale);
     }
