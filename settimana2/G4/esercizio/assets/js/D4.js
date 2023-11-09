@@ -137,18 +137,21 @@ console.log(reverseString())
 
 let frase = 'Questo è il numero otto del gruppo di esercizi del giorno quattro settimana due'
 
-function upperFirst(stringa){
-    let arrayFrase = stringa.split (' '); //ottengo un array di parole se metto lo split con lo spazio
+function upperFirst(stringa) {
+    let arrayFrase = stringa.split(' ');
     let risultato = [];
-    for (let i=0; i < arrayFrase.length; i++){
-        let prima = arrayFrase[1].charAt(0) //estrai la prima lettera delle parole che trovi --> 1 è indice della prima parola senza maiuscola, 0 è la posizione della lettera
-        let parolaTagliata = arrayFrase[1].slice(1) //elimina la prima lettera di ogni parola e restituisci il resto della parola (slice 1 è posizione carattere)
+    for (let i = 0; i < arrayFrase.length; i++) {
+        let prima = arrayFrase[i].charAt(0);
+        let parolaTagliata = arrayFrase[i].slice(1);
         let parolaFinale = prima.toUpperCase() + parolaTagliata;
+        
         risultato.push(parolaFinale);
     }
-   return risultato.join(' ')
+    return risultato.join(' ');
 }
-console.log(upperFirst(frase))
+
+console.log('Esercizio 8');
+console.log(upperFirst(frase));
    
 
 /* ESERCIZIO 9
