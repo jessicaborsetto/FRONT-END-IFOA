@@ -10,7 +10,7 @@ body {
 }
 
 p{
-    font-weight:300;
+    font-weight:300;  
 }
 
 .container{
@@ -18,12 +18,24 @@ p{
     background-color: #fcf7e3;
     border-radius: 30px;
     padding: 20px;
-    align-self: flex-start;
 }
 
 img{
-    width: 400px;
+    width: 40%;
     margin: 20px;
-    align-self: flex-end;
 }
 
+@media screen and (max-width: 568px){
+    .container{
+        display: flex;
+        background-color: #fcf7e3;
+        border-radius: 30px;
+        padding: 20px;
+        flex-wrap: wrap-reverse;
+    }
+
+    img{
+        width: 100%;
+       margin: 3% 0;
+    }
+}
