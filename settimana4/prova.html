@@ -1,0 +1,104 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+  
+  .container {
+      width: 10vw; /* Puoi regolare la larghezza del container */
+      margin: 20px auto; /* Centra il container nella pagina */
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .fade-in-out {
+      opacity: 0;
+      transition: 1s;
+    }
+  </style>
+<body>
+
+
+
+
+  <div id="letterContainer" class="container"></div>
+
+<script src="prova.js"></script>
+
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .container {
+      margin: 20px auto;
+      font-size: 24px;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      display: inline-block;
+      padding: 10px;
+      border: 1px solid #ccc; /* Aggiunto un bordo per evidenziare il div */
+      width: 200px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    /* .fade-in {
+      opacity: 0;
+      animation: fadeIn 0.9s infinite;
+      display: inline-block;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    } */
+    .flash {
+      animation: flash 2.3s infinite;
+      display: inline-block;
+    }
+
+    @keyframes flash {
+      0%, 25%  {
+        opacity: 1;
+      }
+      50%, 75%, 90%, 100% {
+        opacity: 0;
+      }
+    }
+  </style>
+  <title>Testo di lettere 'M'</title>
+</head>
+<body>
+
+<div id="letterContainer" class="container"></div>
+
+<script>
+  var text = "MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM"; // Testo composto solo da 'M'
+  var fixedIndices = [1, 5, 9, 10, 13, 14, 18, 20, 21, 25, 27, 28, 30, 33, 34, 39, 40,44,47, 51, 55, 56, 59, 61,66]; // Indici delle lettere 'M' fisse
+  var animationDuration = 3000; // Durata totale dell'animazione in millisecondi
+
+  // Creare gli elementi HTML per ogni lettera 'M'
+  var letterContainer = document.getElementById('letterContainer');
+  for (var i = 0; i < text.length; i++) {
+    var letterSpan = document.createElement('span');
+    letterSpan.innerHTML = text[i];
+    letterSpan.className = fixedIndices.includes(i) ? '' : 'flash';
+
+    // Imposta intervalli casuali per le animazioni
+    var randomDelay = Math.random() * 1000; // Ritardo massimo di 1000ms
+    letterSpan.style.animationDelay = randomDelay + 'ms';
+
+    letterContainer.appendChild(letterSpan);
+  }
+</script>
+
+</body>
+</html>
