@@ -1,0 +1,17 @@
+$buttonsColor: (
+    primary: #0e6cff,
+    secondary: #ff8700,
+    tertiary: #4caf50,
+);
+
+@each $key, $value in $buttonsColor {
+    .#{$key}-btnColor {
+        background-color: $value;
+        color: $textColor;
+        font-family: $poppins;
+        border: 0;
+        border-radius: 20px;
+        margin: 2% 1%;
+        display: inline;
+    }
+}

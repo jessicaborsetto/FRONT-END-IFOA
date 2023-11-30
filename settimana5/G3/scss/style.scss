@@ -1,0 +1,53 @@
+@import 'reset';
+@import 'spaziature';
+@import 'mixins';
+@import 'font';
+@import 'colori';
+@import 'bottoni';
+@import 'animazioni';
+
+html{
+    @include myHtml;
+    font-family: $poppins;
+}
+
+body{
+    @include body;
+}
+
+header{
+    background-color: $bgColor;
+}
+
+p, a{
+    color: $textColor;
+}
+
+h1{
+    @include titleBig;
+}
+
+h2{
+    font-size: $sizeH2;
+}
+
+h3{
+    font-size: $sizeH3;
+}
+
+p{
+    font-size: $sizeP;
+}
+
+img{
+    @include floating;
+}
+
+.showcase-content{
+    width:90%;
+    @include grid;
+}
+
+.showcase-content img{
+    width: 50%;
+}

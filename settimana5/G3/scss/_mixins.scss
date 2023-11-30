@@ -1,0 +1,31 @@
+@mixin myHtml{
+    margin: 0;
+    padding: 0 0%;
+    box-sizing:border-box;
+}
+
+@mixin titleBig{
+    color: $textColor;
+    font-size: 30px;
+}
+
+@mixin floating{
+    border-radius: 20px;
+    box-shadow: 2px 4px 7px #340868;
+}
+
+@mixin grid{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+@mixin body{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+@mixin display{
+    display: inline;
+}
