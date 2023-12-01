@@ -63,7 +63,7 @@ i{
     background-color: #FDEDDA;
 }
 
-hr{
+.firstHr{
     color: transparent;
     margin: 0;
     padding: 0;
@@ -83,11 +83,11 @@ hr{
     align-items: baseline;
 }
 
-.footer p{
+.footerC p{
     margin: 0 2%;
 }
 
-.footer{
+.footerC{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -96,4 +96,28 @@ hr{
     display: flex;
     align-items: center;
     width: 70%;
+}
+
+ul li{
+    list-style: none;
+    display: inline;
+    margin-left: 2%;
+}
+
+ul{
+    padding: 0;
+}
+
+.copyright{
+    width: 50%;
+}
+
+.utilità{
+    width: 50%;
+    text-align: right
+}
+
+.footerContenuto{
+    display: flex;
+    justify-content: space-between;
 }
