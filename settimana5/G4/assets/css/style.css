@@ -5,6 +5,10 @@
     font-family: 'Inter', sans-serif;
 }
 
+.sezione1{
+    background-color: #F5F4F8;
+}
+
 .icona{
     width:40px;
     height:40px;
@@ -40,6 +44,7 @@ i{
 
 .record{
     margin-top: 2%;
+    background-color: #fff;
 }
 
 .iconRecord{
@@ -71,4 +76,24 @@ hr{
 
 .star{
     font-size: larger;
+}
+
+.price{
+    display: flex;
+    align-items: baseline;
+}
+
+.footer p{
+    margin: 0 2%;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.author{
+    display: flex;
+    align-items: center;
+    width: 70%;
 }
