@@ -21,6 +21,11 @@ button {
   outline: none;
   border: none;
   cursor: pointer;
+  margin: 3px;
+  transition: transform 0.3s ease-in-out;
+}
+button:hover {
+  transform: scale(1.05);
 }
 
 h1, h2, h3, h4, h5, h6, p, ul, li {
@@ -58,9 +63,6 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
 }
 
 html {
-  margin: 0;
-  padding: 0 0%;
-  box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
 
