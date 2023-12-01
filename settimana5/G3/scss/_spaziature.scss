@@ -1,0 +1,34 @@
+$padding-default:20px;
+$margin-default:0 auto;
+
+$sizes:(
+    sm: 12px,
+    normal: 16px,
+    md: 24px,
+    lg: 36px,
+    xl:48px,
+    xxl:160px,
+);
+
+@mixin create-padding($direction:null){              
+    @each $key, $value in $sizes{
+        .padding-#{$direction}-#{$key}{
+            @if $direction {
+                padding-#{$direction}:$value;
+            } @else {
+                padding: $value;
+            }
+        }
+    }
+}       //direction = top,bottom,.. -non riceve nulla come default quindi va null MA VOGLIO CHE ABBIA UNA DIREZIONE CHE GLI PASSO: se riceve una direzione crea la proprietà padding-top-sm:x, sennò direbbe padding-sm:x
+
+//visto che il codice riceve un parametro che condiziona qualcosa, non posso fare un semplice each
+
+//per richiamare il mixing lo @include nelle classi
+//visto che però in questo mixing abbiamo creato una classe, bisogna richiamare il mixing sennò non funziona
+@include create-padding();   //triggerare il mixing come nelle funzioni
+@include create-padding(top);
+@include create-padding(bottom);
+@include create-padding(left);
+@include create-padding(right);
+@include create-padding(block);
