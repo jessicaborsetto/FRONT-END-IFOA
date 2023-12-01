@@ -1,4 +1,32 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Outfit:wght@100;300;500;700;900&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, li {
+  margin-top: 0;
+}
+
 .primary-btnColor {
   background-color: #0e6cff;
   color: #f4f4f4;
@@ -51,16 +79,18 @@ p, a {
 }
 
 h1 {
+  font-size: 96px;
+  font-weight: 900;
+  line-height: 0.95;
   color: #f4f4f4;
-  font-size: 30px;
 }
 
 h2 {
-  font-size: 25px;
+  font-size: 48px;
 }
 
 h3 {
-  font-size: 19px;
+  font-size: 24px;
 }
 
 p {

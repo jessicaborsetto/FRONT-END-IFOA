@@ -5,8 +5,10 @@
 }
 
 @mixin titleBig{
+    font-size: $font-size-xxlarge;
+    font-weight: 900;
+    line-height: 0.95;
     color: $textColor;
-    font-size: 30px;
 }
 
 @mixin floating{
