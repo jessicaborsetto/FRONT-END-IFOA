@@ -17,22 +17,11 @@ a {
   text-decoration: none;
 }
 
-button {
-  outline: none;
-  border: none;
-  cursor: pointer;
-  margin: 3px;
-  transition: transform 0.3s ease-in-out;
-}
-button:hover {
-  transform: scale(1.05);
-}
-
 h1, h2, h3, h4, h5, h6, p, ul, li {
   margin-top: 0;
 }
 
-.primary-btnColor {
+.btn-primary {
   background-color: #0e6cff;
   color: #f4f4f4;
   font-family: "Poppins", sans-serif;
@@ -42,7 +31,7 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
   display: inline;
 }
 
-.secondary-btnColor {
+.btn-secondary {
   background-color: #ff8700;
   color: #f4f4f4;
   font-family: "Poppins", sans-serif;
@@ -52,7 +41,7 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
   display: inline;
 }
 
-.tertiary-btnColor {
+.btn-tertiary {
   background-color: #4caf50;
   color: #f4f4f4;
   font-family: "Poppins", sans-serif;
@@ -60,6 +49,17 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
   border-radius: 20px;
   margin: 2% 1%;
   display: inline;
+}
+
+.btn {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  margin: 3px;
+  transition: transform 0.3s ease-in-out;
+}
+.btn:hover {
+  transform: scale(1.05);
 }
 
 html {

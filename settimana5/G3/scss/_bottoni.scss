@@ -5,7 +5,7 @@ $buttonsColor: (
 );
 
 @each $key, $value in $buttonsColor {
-    .#{$key}-btnColor {
+    .btn-#{$key} {
         background-color: $value;
         color: $textColor;
         font-family: $poppins;
@@ -15,7 +15,6 @@ $buttonsColor: (
         display: inline;
     }
 }
-
 
 .btn{
     outline: none;
