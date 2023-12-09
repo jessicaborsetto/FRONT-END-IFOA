@@ -25,9 +25,8 @@ function handleBooks(libri){
        
         let cardText = document.createElement('p');
    
-       
-        
-       
+        let divButtons = document.createElement('div');
+        divButtons.classList.add('divButtons')
 
         let buttonScarta = document.createElement('a');
         buttonScarta.classList.add('btn');
@@ -35,6 +34,13 @@ function handleBooks(libri){
         buttonScarta.classList.add('btnInfo');
         buttonScarta.innerText = 'Info'
         buttonScarta.setAttribute('id', 'cardModal')
+
+        let buttonBuy = document.createElement('a');
+        buttonBuy.classList.add('btn');
+        buttonBuy.classList.add('btn-danger');
+        buttonBuy.classList.add('btnInfo');
+        buttonBuy.innerText = 'Compra'
+
         
         buttonScarta.addEventListener('click', function () {
             // Creare il modale dinamicamente in JavaScript
@@ -118,7 +124,10 @@ function handleBooks(libri){
         card.appendChild(img)
         card.appendChild(cardBody)
         // card.appendChild(buttonDiv)
-        card.appendChild(buttonScarta)
+        card.appendChild(divButtons)
+        divButtons.appendChild(buttonBuy)
+        divButtons.appendChild(buttonScarta)
+
 
         cardBody.appendChild(cardTitle)
         cardBody.appendChild(cardText)
