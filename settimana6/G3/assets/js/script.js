@@ -7,13 +7,6 @@ fetch(url)
 
 function handleBooks(libri){
     libri.forEach(el => {
-
-        let schedaLibro = document.createElement('div');
-        schedaLibro.classList.add('modal');
-        schedaLibro.setAttribute('id', 'cardModal')
-
-        let modalBody = document.createElement('div');
-        modalBody.classList.add('modal-body')
        
         let card = document.createElement('div');
         card.classList.add('card');
@@ -29,23 +22,12 @@ function handleBooks(libri){
         cardBody.style.display = "none";
 
         let cardTitle = document.createElement('h5');
-        cardTitle.classList.add('card-title');
-        cardTitle.innerText = el.title;
-
-        let cardText = document.createElement('p');
-        cardText.classList.add('card-text');
-        cardText.classList.add('category');
-        cardText.innerText = el.category;
        
-        let buttonDiv = document.createElement('div');
-        buttonDiv.classList.add('buttonDiv');
-
-        let button = document.createElement('a');
-        button.classList.add('btn');
-        button.classList.add('btn-primary');
-        button.href = '#';
-        button.innerText ='vai al carrello'
-        button.style.display = "none";
+        let cardText = document.createElement('p');
+   
+       
+        
+       
 
         let buttonScarta = document.createElement('a');
         buttonScarta.classList.add('btn');
@@ -75,10 +57,12 @@ function handleBooks(libri){
 
             let modalTitle = document.createElement('h5');
             modalTitle.classList.add('modal-title');
+            modalTitle.classList.add('display-6');
             modalTitle.innerText = el.title;
 
             let closeButton = document.createElement('button');
             closeButton.classList.add('close');
+            closeButton.classList.add('btnClose');
             closeButton.setAttribute('type', 'button');
             closeButton.setAttribute('data-dismiss', 'modal');
             closeButton.setAttribute('aria-label', 'Close');
@@ -88,19 +72,33 @@ function handleBooks(libri){
                 document.body.classList.remove('modal-open');
             });
 
-            let closeIcon = document.createElement('span');
+            let closeIcon = document.createElement('i');
             closeIcon.setAttribute('aria-hidden', 'true');
-            closeIcon.innerHTML = '&times;';
+            closeIcon.classList.add('bi', 'bi-x-circle-fill')
+           
+            closeButton.appendChild(closeIcon)
 
             let modalBody = document.createElement('div');
-            modalBody.classList.add('modal-body');
+            modalBody.classList.add('modal-body', 'category');
             modalBody.innerHTML = `
                 <p>${el.category}</p>
+                <p>$${el.price}</p>
                 <img src="${el.img}" class="img-fluid" alt="${el.title}">
             `;
 
+
+            let buttonDiv = document.createElement('div');
+            buttonDiv.classList.add('buttonDiv');
+
+            let button = document.createElement('a');
+            button.classList.add('btn');
+            button.classList.add('btn-primary');
+            button.href = '#';
+            button.innerText ='vai al carrello'
+
+            buttonDiv.appendChild(button)
+            modalBody.appendChild(button)
             modalHeader.appendChild(modalTitle);
-            closeButton.appendChild(closeIcon);
             modalHeader.appendChild(closeButton);
             modalContent.appendChild(modalHeader);
             modalContent.appendChild(modalBody);
@@ -119,12 +117,12 @@ function handleBooks(libri){
         
         card.appendChild(img)
         card.appendChild(cardBody)
-        card.appendChild(buttonDiv)
+        // card.appendChild(buttonDiv)
         card.appendChild(buttonScarta)
 
         cardBody.appendChild(cardTitle)
         cardBody.appendChild(cardText)
-        buttonDiv.appendChild(button)
+        
        
 
         document.querySelector('main').appendChild(card)
